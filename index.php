@@ -51,7 +51,7 @@ $tampil = $conn->query("SELECT * FROM project");
                     <div class="row gy-4">
                         <div class="col-md-3 d-flex justify-content-center">
                             <div class="profile-img rounded-circle overflow-hidden border border-5 border-white shadow" style="width: 150px; height: 150px;">
-                                <img class="w-100" src="<?= $show['photo'] ?>" alt="">
+                                <img class="w-100" src="assets/<?= $show['photo'] ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-9">
@@ -121,7 +121,7 @@ $tampil = $conn->query("SELECT * FROM project");
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="header pb-3">
-                                            <img class="w-100" src="<?= $show['thumbnail'] ?>" alt="">
+                                            <img class="w-100" src="assets/<?= $show['thumbnail'] ?>" alt="">
                                             <h6 class="fw-bold"><?= $show['name'] ?></h6>
                                             <span class="text-muted"><?= $show['category'] ?></span><br>
                                             <span><?= $show['start_date'] . " | " . $show['finish_date']  ?></span>

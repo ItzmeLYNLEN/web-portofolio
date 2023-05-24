@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 01:03 AM
+-- Generation Time: May 24, 2023 at 03:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -40,7 +40,7 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`author_id`, `name`, `username`, `password`, `photo`) VALUES
-(1, 'Muhammad Daffa Adz Dzikraa', 'daoa', 'zee', '');
+(1, 'Muhammad Daffa Adz Dzikraa', 'daoa', 'zee', 'zee.jpg');
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE `project` (
   `category` varchar(20) NOT NULL,
   `start_date` date NOT NULL,
   `finish_date` date NOT NULL,
-  `thumbnail` varchar(100) NOT NULL
+  `thumbnail` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -90,7 +90,10 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`project_id`, `name`, `description`, `category`, `start_date`, `finish_date`, `thumbnail`) VALUES
-(1, 'Rental Buku', 'Website untuk merental buku', 'Website', '2023-02-01', '2023-03-09', '');
+(1, 'Rental Buku', 'Website untuk merental buku', 'Website', '2023-02-01', '2023-03-09', 'perpus.png'),
+(2, 'E-Booking', 'Website untuk booking tiket', 'Website', '2022-11-22', '2022-12-10', 'travel.png'),
+(4, 'Pembayaran Spp', 'Aplikasi untuk membayar SPP', 'Aplikasi Desktop', '2021-12-04', '2021-12-11', 'p3 (1).png'),
+(5, 'Inventory Gudang', 'Website mengecek penyimpanan', 'Website', '2022-12-03', '2022-12-04', 'p1.png');
 
 --
 -- Indexes for dumped tables
@@ -134,7 +137,7 @@ ALTER TABLE `author_detail`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `project_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `project_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
